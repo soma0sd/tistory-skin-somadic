@@ -1,0 +1,25 @@
+<!-- reply write -->
+<s_rp_input_form>
+    <div class="comment-write">
+        <s_rp_member>
+            <s_rp_guest>
+                <div class="info_wrapper">
+                    <input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]" placeholder="이름" />
+                    <input type="password" maxlength="8" name="[##_rp_input_password_##]" value="[##_rp_admin_check_##]"
+                        placeholder="비밀번호" />
+                    <input type="text" name="[##_rp_input_homepage_##]" value="" placeholder="홈페이지" />
+                </div>
+            </s_rp_guest>
+            <div class="secret">
+                <input type="checkbox" value="None" id="secret" name="[##_rp_input_is_secret_##]" />
+                <label for="secret"></label>
+            </div>
+        </s_rp_member>
+        <div class="desc_wrapper">
+            <textarea class="desc" name="[##_rp_input_comment_##]" rows="2"></textarea>
+        </div>
+        <div class="submit_wrapper">
+            <input class="button submit" type="submit" value="댓글" onclick="[##_rp_onclick_submit_##]" />
+        </div>
+    </div>
+</s_rp_input_form>
