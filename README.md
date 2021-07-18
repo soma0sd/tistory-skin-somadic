@@ -8,3 +8,9 @@
 ## 개발 요구사항
 
 - node.js 16.X
+
+## 개발환경 구성
+
+```bash
+npm install
+```
