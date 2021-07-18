@@ -1,0 +1,283 @@
+$background-colors: (
+    50: #ECEFF1,
+    100: #CFD8DC,
+    200: #B0BEC5,
+    300: #90A4AE,
+    400: #78909C,
+    500: #607D8B,
+    600: #546E7A,
+    700: #455A64,
+    800: #37474F,
+    900: #263238
+);
+$primary-colors: (
+    50: #E0F2F1,
+    100: #B2DFDB,
+    200: #80CBC4,
+    300: #4DB6AC,
+    400: #26A69A,
+    500: #009688,
+    600: #00897B,
+    700: #00796B,
+    800: #00695C,
+    900: #004D40
+);
+$secondary-colors: (
+    50: #FBE9E7,
+    100: #FFCCBC,
+    200: #FFAB91,
+    300: #FF8A65,
+    400: #FF7043,
+    500: #FF5722,
+    600: #F4511E,
+    700: #E64A19,
+    800: #D84315,
+    900: #BF360C
+);
+$max-width: 800px;
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Noto+Sans+KR:wght@100;300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+body {
+    background-color: map-get($background-colors, 700);
+    color: map-get($background-colors, 50);
+}
+a {
+    pointer-events: initial;
+    text-decoration: none;
+}
+header {
+    margin: auto;
+    max-width: 800px;
+    h1.blog-title {
+        color: map-get($background-colors, 50);
+        margin: 0;
+        text-align: right;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        font-size: 2.5em;
+        font-weight: 200;
+    }
+}
+main {
+    color: #ECEFF1;
+    margin: auto;
+    max-width: 800px;
+}
+#_s_article_rep {
+    // 인덱스 컨테이너
+    div.article-rep-item {
+        background-color: map-get($background-colors, 700);
+        padding: 1em 0.5em 1em 0.5em;
+        border-top: 0.1em  map-get($background-colors, 500) solid;
+    }
+    // 인덱스 요소
+    div.article-rep-item {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+        grid-gap: 0.7rem;
+        a.category {
+            grid-row: 1;
+            grid-column: 1 / 4;
+            justify-self: end;
+            padding: 0.1em 0.3em 0.1em 0.3em;
+            display: inline-block;
+            border-radius: 0.5em;
+            background-color: map-get($background-colors, 900);
+            text-align: right;
+            color: map-get($background-colors, 300);
+        }
+        a.thumbnail {
+            grid-row: 3;
+            grid-column: 3;
+            display: block;
+            width: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @media screen and (max-width: 600px) {
+                grid-column: 1 / 4;
+                width: 100%;
+                padding-bottom: 50%;
+            }
+        }
+        a.title {
+            justify-self: start;
+            grid-row: 2;
+            grid-column: 1 / 4;
+            display: block;
+            font-size: 1.5em;
+            color: map-get($background-colors, 50);
+        }
+        a.summary {
+            justify-self: start;
+            grid-row: 3;
+            grid-column: 1 / 4;
+            display: block;
+            color: map-get($background-colors, 300);
+            line-height: 1.5em;
+            height: 9em;
+            overflow:hidden;
+            @media screen and (max-width: 600px) {
+                grid-row: 4;
+                height: 7.5em;
+            }
+        }
+        a.thumbnail + a.summary {
+            grid-column: 1 / 3;
+            @media screen and (max-width: 600px) {
+                grid-column: 1 / 4;
+            }
+        }
+    }
+    // 포스트 제목
+    h1.article-title {
+        background-color: map-get($background-colors, 900);
+        margin: 0;
+        padding: 2rem 1rem;
+    }
+    // 포스트 본문
+    div.article_rep_desc {
+        line-height: 2em;
+        word-break: normal;
+        font-weight: 100;
+        letter-spacing: 0.07em;
+        word-spacing: 0.1em;
+        background-color: map-get($background-colors, 900);
+        border-radius: 0.3rem;
+        padding: 0.5em 1em;
+        h1, h2, h3, h4, h5, h6 {
+            padding: 0.5em 0em 0.3em 0em;
+            margin: 1em 0em 0.5em 0em;
+        }
+        h2 {
+            border-bottom: map-get($background-colors, 200) 5px solid;
+        }
+        h3 {
+            padding-bottom: 0.1em;
+            border-bottom: map-get($background-colors, 300) 3px solid;
+        }
+        ul, ol {
+            margin-left: 1.5em;
+        }
+        blockquote {
+            padding: 0.8em 0.5em;
+            background-color: map-get($background-colors, 200);
+            color: map-get($background-colors, 900);
+            margin-left: -0.5em;
+            border-radius: 0.5em;
+            border-top: map-get($primary-colors, 500) 1rem solid;
+            P {
+                font-weight: 300;
+                color: map-get($background-colors, 900);
+            }
+        }
+        table {
+            margin: auto;
+            border:  map-get($background-colors, 900) 2px solid;
+            border-collapse: collapse;
+            td, th {
+                border: 1px solid map-get($background-colors, 700);
+                padding: 0em 0.5em 0em 0.5em;
+            }
+        }
+        figure.fileblock {
+            letter-spacing: 0em;
+            a {
+                background-color: map-get($background-colors, 200);
+            }
+            div.filename{
+                margin-top: 5px;
+                .name {
+                    height: 30px;
+                    color: map-get($background-colors, 900);
+                }
+            }
+            div.size {
+                color: map-get($background-colors, 700);
+            }
+        }
+        figure.imageblock {
+            margin-top: 1em;
+        }
+        .another_category {
+            th > span, td > span {
+                display: none;
+            } 
+        }
+        p > code, li > code {
+            margin: 0em 0.2em;
+            padding: 0.1em 0.3em;
+            border-radius: 0.2em;
+            background-color: map-get($background-colors, 300);
+            color: map-get($background-colors, 900);
+        }
+        pre { margin-top: 1em;}
+        pre > div.code-label {
+            background-color: map-get($background-colors, 700);
+            padding: 0.3em 1em;
+            font-weight: 500;
+            i.icon {
+                margin-right: 0.8em;
+            }
+        }
+        li > a, p > a {
+            font-weight: 500;
+            color: map-get($secondary-colors, 900);
+            &:after {
+                content: 'launch';
+                font-family: 'Material Icons';
+                font-size: 0.8em;
+            }
+        }
+        kbd {
+            font-weight: bold;
+            font-size: 0.8em;
+            vertical-align: middle;
+            margin: 0 0.3rem;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            display: inline-block;
+            padding: 1px 8px;
+            background: linear-gradient(178deg, #fff, #fff, #fff, #ddd);
+            box-shadow: 1px 1px 2px #777;
+        }
+        pre > code {
+            line-height: 1.5em;
+        }
+        ul.directory {
+            list-style: none;
+            ul {
+                list-style: none;
+                margin-left: 1em;
+            }
+            li {
+                padding-top: 0.5em;
+                line-height: 1.5em;
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+#_s_paging {
+    padding: 1em 0 2em 0;
+    max-width: $max-width;
+    margin: auto;
+    text-align: center;
+    a {
+        display: inline-block;
+        width: 2em;
+        text-align: center;
+        font-size: 1.5em;
+        color: map-get($background-colors, 300)
+    }
+    a[href] {
+        color: map-get($background-colors, 100)
+    }
+}

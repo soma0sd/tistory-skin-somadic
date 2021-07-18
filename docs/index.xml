@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+   <information>
+      <name>SSE</name>
+      <version>1.0</version>
+      <description>
+         <![CDATA[Simple Skin for Engineers]]>
+      </description>
+      <license>
+         <![CDATA[MIT]]>
+      </license>
+   </information>
+   <author>
+      <name>soma0sd</name>
+      <homepage>https://soma0sd.tistory.com</homepage>
+      <email>soma0sd@gmail.com</email>
+   </author>
+</skin>

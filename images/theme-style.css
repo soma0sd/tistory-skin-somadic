@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Noto+Sans+KR:wght@100;300;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+body {
+  background-color: #455A64;
+  color: #ECEFF1;
+}
+
+a {
+  pointer-events: initial;
+  text-decoration: none;
+}
+
+header {
+  margin: auto;
+  max-width: 800px;
+}
+
+header h1.blog-title {
+  color: #ECEFF1;
+  margin: 0;
+  text-align: right;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  font-size: 2.5em;
+  font-weight: 200;
+}
+
+main {
+  color: #ECEFF1;
+  margin: auto;
+  max-width: 800px;
+}
+
+#_s_article_rep div.article-rep-item {
+  background-color: #455A64;
+  padding: 1em 0.5em 1em 0.5em;
+  border-top: 0.1em #607D8B solid;
+}
+
+#_s_article_rep div.article-rep-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 0.7rem;
+}
+
+#_s_article_rep div.article-rep-item a.category {
+  grid-row: 1;
+  grid-column: 1 / 4;
+  justify-self: end;
+  padding: 0.1em 0.3em 0.1em 0.3em;
+  display: inline-block;
+  border-radius: 0.5em;
+  background-color: #263238;
+  text-align: right;
+  color: #90A4AE;
+}
+
+#_s_article_rep div.article-rep-item a.thumbnail {
+  grid-row: 3;
+  grid-column: 3;
+  display: block;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+  #_s_article_rep div.article-rep-item a.thumbnail {
+    grid-column: 1 / 4;
+    width: 100%;
+    padding-bottom: 50%;
+  }
+}
+
+#_s_article_rep div.article-rep-item a.title {
+  justify-self: start;
+  grid-row: 2;
+  grid-column: 1 / 4;
+  display: block;
+  font-size: 1.5em;
+  color: #ECEFF1;
+}
+
+#_s_article_rep div.article-rep-item a.summary {
+  justify-self: start;
+  grid-row: 3;
+  grid-column: 1 / 4;
+  display: block;
+  color: #90A4AE;
+  line-height: 1.5em;
+  height: 9em;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  #_s_article_rep div.article-rep-item a.summary {
+    grid-row: 4;
+    height: 7.5em;
+  }
+}
+
+#_s_article_rep div.article-rep-item a.thumbnail + a.summary {
+  grid-column: 1 / 3;
+}
+
+@media screen and (max-width: 600px) {
+  #_s_article_rep div.article-rep-item a.thumbnail + a.summary {
+    grid-column: 1 / 4;
+  }
+}
+
+#_s_article_rep h1.article-title {
+  background-color: #263238;
+  margin: 0;
+  padding: 2rem 1rem;
+}
+
+#_s_article_rep div.article_rep_desc {
+  line-height: 2em;
+  word-break: normal;
+  font-weight: 100;
+  letter-spacing: 0.07em;
+  word-spacing: 0.1em;
+  background-color: #263238;
+  border-radius: 0.3rem;
+  padding: 0.5em 1em;
+}
+
+#_s_article_rep div.article_rep_desc h1, #_s_article_rep div.article_rep_desc h2, #_s_article_rep div.article_rep_desc h3, #_s_article_rep div.article_rep_desc h4, #_s_article_rep div.article_rep_desc h5, #_s_article_rep div.article_rep_desc h6 {
+  padding: 0.5em 0em 0.3em 0em;
+  margin: 1em 0em 0.5em 0em;
+}
+
+#_s_article_rep div.article_rep_desc h2 {
+  border-bottom: #B0BEC5 5px solid;
+}
+
+#_s_article_rep div.article_rep_desc h3 {
+  padding-bottom: 0.1em;
+  border-bottom: #90A4AE 3px solid;
+}
+
+#_s_article_rep div.article_rep_desc ul, #_s_article_rep div.article_rep_desc ol {
+  margin-left: 1.5em;
+}
+
+#_s_article_rep div.article_rep_desc blockquote {
+  padding: 0.8em 0.5em;
+  background-color: #B0BEC5;
+  color: #263238;
+  margin-left: -0.5em;
+  border-radius: 0.5em;
+  border-top: #009688 1rem solid;
+}
+
+#_s_article_rep div.article_rep_desc blockquote P {
+  font-weight: 300;
+  color: #263238;
+}
+
+#_s_article_rep div.article_rep_desc table {
+  margin: auto;
+  border: #263238 2px solid;
+  border-collapse: collapse;
+}
+
+#_s_article_rep div.article_rep_desc table td, #_s_article_rep div.article_rep_desc table th {
+  border: 1px solid #455A64;
+  padding: 0em 0.5em 0em 0.5em;
+}
+
+#_s_article_rep div.article_rep_desc figure.fileblock {
+  letter-spacing: 0em;
+}
+
+#_s_article_rep div.article_rep_desc figure.fileblock a {
+  background-color: #B0BEC5;
+}
+
+#_s_article_rep div.article_rep_desc figure.fileblock div.filename {
+  margin-top: 5px;
+}
+
+#_s_article_rep div.article_rep_desc figure.fileblock div.filename .name {
+  height: 30px;
+  color: #263238;
+}
+
+#_s_article_rep div.article_rep_desc figure.fileblock div.size {
+  color: #455A64;
+}
+
+#_s_article_rep div.article_rep_desc figure.imageblock {
+  margin-top: 1em;
+}
+
+#_s_article_rep div.article_rep_desc .another_category th > span, #_s_article_rep div.article_rep_desc .another_category td > span {
+  display: none;
+}
+
+#_s_article_rep div.article_rep_desc p > code, #_s_article_rep div.article_rep_desc li > code {
+  margin: 0em 0.2em;
+  padding: 0.1em 0.3em;
+  border-radius: 0.2em;
+  background-color: #90A4AE;
+  color: #263238;
+}
+
+#_s_article_rep div.article_rep_desc pre {
+  margin-top: 1em;
+}
+
+#_s_article_rep div.article_rep_desc pre > div.code-label {
+  background-color: #455A64;
+  padding: 0.3em 1em;
+  font-weight: 500;
+}
+
+#_s_article_rep div.article_rep_desc pre > div.code-label i.icon {
+  margin-right: 0.8em;
+}
+
+#_s_article_rep div.article_rep_desc li > a, #_s_article_rep div.article_rep_desc p > a {
+  font-weight: 500;
+  color: #BF360C;
+}
+
+#_s_article_rep div.article_rep_desc li > a:after, #_s_article_rep div.article_rep_desc p > a:after {
+  content: 'launch';
+  font-family: 'Material Icons';
+  font-size: 0.8em;
+}
+
+#_s_article_rep div.article_rep_desc kbd {
+  font-weight: bold;
+  font-size: 0.8em;
+  vertical-align: middle;
+  margin: 0 0.3rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 1px 8px;
+  background: linear-gradient(178deg, #fff, #fff, #fff, #ddd);
+  box-shadow: 1px 1px 2px #777;
+}
+
+#_s_article_rep div.article_rep_desc pre > code {
+  line-height: 1.5em;
+}
+
+#_s_article_rep div.article_rep_desc ul.directory {
+  list-style: none;
+}
+
+#_s_article_rep div.article_rep_desc ul.directory ul {
+  list-style: none;
+  margin-left: 1em;
+}
+
+#_s_article_rep div.article_rep_desc ul.directory li {
+  padding-top: 0.5em;
+  line-height: 1.5em;
+}
+
+#_s_article_rep div.article_rep_desc ul.directory li span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#_s_paging {
+  padding: 1em 0 2em 0;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+#_s_paging a {
+  display: inline-block;
+  width: 2em;
+  text-align: center;
+  font-size: 1.5em;
+  color: #90A4AE;
+}
+
+#_s_paging a[href] {
+  color: #CFD8DC;
+}

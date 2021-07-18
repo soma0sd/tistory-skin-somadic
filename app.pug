@@ -1,0 +1,32 @@
+doctype html
+
+html(lang="ko")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    title [##_page_title_##]
+
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+    link(rel="stylesheet" href="./images/theme-style.css")
+
+  body(id="[##_body_id_##]")
+    block TIDORY
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/github-dark.min.css")
+  script(defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css")
+  script(defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js")
+  script(defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);")
+  script(defer src="./images/theme-onload.js")
+
+
+style.
+  * {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  code {
+      font-family: 'Nanum Gothic Coding', monospace;
+  }

@@ -1,0 +1,33 @@
+{
+  "name": "tidory",
+  "scripts": {
+    "start": "tidory start",
+    "preview": "tidory preview",
+    "production": "tidory production",
+    "store": "tidory store",
+    "deploy": "tidory deploy",
+    "lint": "eslint --ext .js --ignore-path .gitignore . && pug-lint .",
+    "sass:watch": "node-sass -w sass/theme-style.scss images/theme-style.css --output-style expanded"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tidory/tidory"
+  },
+  "dependencies": {
+    "node-sass": "^6.0.1",
+    "tidory": "8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.31.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-loader": "^4.0.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "pug-lint": "^2.6.0"
+  }
+}

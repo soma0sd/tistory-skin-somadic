@@ -1,2 +1,6 @@
-src/
-backup/
+# Python dev
+.mypy_cache
+
+# node.js dev
+node_modules
+package-lock.json
