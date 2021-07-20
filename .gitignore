@@ -4,3 +4,4 @@
 # node.js dev
 node_modules
 package-lock.json
+tidory.config.js
