@@ -133,7 +133,7 @@ main {
 }
 
 #_s_article_rep div.article_rep_desc h2 {
-  border-bottom: #B0BEC5 5px solid;
+  border-bottom: #78909C 3px solid;
 }
 
 #_s_article_rep div.article_rep_desc h3 {
@@ -221,12 +221,16 @@ main {
   margin-right: 0.8em;
 }
 
-#_s_article_rep div.article_rep_desc li > a, #_s_article_rep div.article_rep_desc p > a {
+#_s_article_rep div.article_rep_desc li a, #_s_article_rep div.article_rep_desc p a {
   font-weight: 500;
+  color: #E64A19;
+}
+
+#_s_article_rep div.article_rep_desc li a:visited, #_s_article_rep div.article_rep_desc p a:visited {
   color: #BF360C;
 }
 
-#_s_article_rep div.article_rep_desc li > a:after, #_s_article_rep div.article_rep_desc p > a:after {
+#_s_article_rep div.article_rep_desc li a:after, #_s_article_rep div.article_rep_desc p a:after {
   content: 'launch';
   font-family: 'Material Icons';
   font-size: 0.8em;

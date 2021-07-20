@@ -1,8 +1,8 @@
 {
   "name": "tidory",
   "scripts": {
-    "start": "tidory start",
-    "preview": "tidory preview",
+    "start": "concurrently \"tidory start\" \"npm run sass:watch\"",
+    "preview": "concurrently \"tidory preview\" \"npm run sass:watch\"",
     "production": "tidory production",
     "store": "tidory store",
     "deploy": "tidory deploy",
@@ -15,10 +15,11 @@
     "url": "https://github.com/tidory/tidory"
   },
   "dependencies": {
-    "node-sass": "^6.0.1",
     "tidory": "8"
   },
   "devDependencies": {
+    "node-sass": "^6.0.1",
+    "concurrently": "^6.2.0",
     "autoprefixer": "^10.3.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.31.0",
