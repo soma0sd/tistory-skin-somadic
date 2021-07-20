@@ -1,4 +1,4 @@
-var HLJS_LANGS = {
+const HLJS_LANGS = {
   'language-xml': { name: 'HTML/XML', devicon: 'devicon-html5-plain' },
   'language-py': { name: 'Python', devicon: 'devicon-python-plain' },
   'language-python': { name: 'Python', devicon: 'devicon-python-plain' },
@@ -7,7 +7,9 @@ var HLJS_LANGS = {
   'language-js': { name: 'JavaScript', devicon: 'devicon-javascript-plain' },
   'language-javascript': { name: 'JavaScript', devicon: 'devicon-javascript-plain' },
   'language-css': { name: 'CSS', devicon: 'devicon-css3-plain' },
-  'language-html': { name: 'HTML', devicon: 'devicon-html5-plain' }
+  'language-bash': { name: 'BASH', devicon: 'devicon-html5-plain' },
+  'language-json': { name: 'JSON', devicon: 'devicon-appwrite-plain' },
+  'language-html': { name: 'HTML', devicon: 'devicon-bash-plain' }
 }
 
 // 소스코드 하이라이트 이후 언어를 소스코드 상단에 표시
