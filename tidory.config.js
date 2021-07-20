@@ -3,8 +3,8 @@
  * https://tidory.com/docs/configuration/
  */
 module.exports = {
-  ts_session: 'ba6f110ff0b879ac932391f5e37fef2e854b7371',
-  url: 'https://soma0sd-blog.tistory.com/',
+  ts_session: 'none',
+  url: 'none',
 
   /** Preview */
   preview: {
@@ -23,7 +23,7 @@ module.exports = {
     * media
     * guestbook
     */
-    mode: 'index'
+    mode: 'entry'
   },
 
   /**
